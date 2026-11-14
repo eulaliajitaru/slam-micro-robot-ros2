@@ -1,0 +1,33 @@
+slam_toolbox:
+  ros__parameters:
+    solver_plugin: solver_plugins::CeresSolver
+    ceres_linear_solver: SPARSE_NORMAL_CHOLESKY
+    ceres_preconditioner: SCHUR_JACOBI
+    ceres_trust_strategy: LEVENBERG_MARQUARDT
+    ceres_dogleg_type: TRADITIONAL_DOGLEG
+    ceres_loss_function: None
+
+    odom_frame: odom
+    map_frame: map
+    base_frame: base_link
+    scan_topic: /scan
+
+    use_sim_time: false
+    use_scan_matching: true
+    use_scan_barycenter: true
+
+    use_map_saver: true
+    mode: mapping
+
+    distance_threshold: 0.1
+    angle_threshold: 0.1
+    update_rate: 1.0
+
+    max_laser_range: 12.0
+    minimum_time_interval: 0.5
+    transform_timeout: 0.5
+    tf_buffer_duration: 30.0
+
+    resolution: 0.05
+    max_iterations: 1000
+    enable_interactive_mode: false
